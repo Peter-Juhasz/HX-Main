@@ -23,7 +23,8 @@
             if (predicate == null)
                 throw new ArgumentNullException("predicate");
 
-            int width = source.GetLength(0), height = source.GetLength(1);
+            int width = source.GetLength(0),
+                height = source.GetLength(1);
 
             for (int x = 0; x < width; x++)
             for (int y = 0; y < height; y++)
@@ -56,13 +57,14 @@
             if (selector == null)
                 throw new ArgumentNullException("selector");
 
-            int width = source.GetLength(0), height = source.GetLength(1);
+            int width = source.GetLength(0),
+                height = source.GetLength(1);
 
             TResult[] result = new TResult[width * height];
 
             for (int x = 0; x < width; x++)
             for (int y = 0; y < height; y++)
-                result[x * width + y] = selector(source[x, y]);
+                result[x * height + y] = selector(source[x, y]);
 
             return result;
         }
@@ -110,7 +112,8 @@
             if (source == null)
                 throw new ArgumentNullException("source");
 
-            int width = source.GetLength(0), height = source.GetLength(1);
+            int width = source.GetLength(0),
+                height = source.GetLength(1);
 
             T[][] result = new T[width][];
 
@@ -156,7 +159,8 @@
             if (source == null)
                 throw new ArgumentNullException("source");
 
-            int width = source.GetLength(0), height = source.GetLength(1);
+            int width = source.GetLength(0),
+                height = source.GetLength(1);
 
             for (int y = 0; y < height; y++)
             {
@@ -180,7 +184,8 @@
             if (source == null)
                 throw new ArgumentNullException("source");
 
-            int width = source.GetLength(0), height = source.GetLength(1);
+            int width = source.GetLength(0),
+                height = source.GetLength(1);
 
             for (int x = 0; x < width; x++)
             {

@@ -36,16 +36,32 @@
   </PropertyGroup>
   <ItemGroup>
     <!-- A reference to the entire .NET Framework is automatically included -->
-    <Compile Include="2D.Mapping.cs" />
+    <Compile Include="2D.Mapping.cs">
+      <DependentUpon>2D.cs</DependentUpon>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="2D.Combination.cs" />
-    <Compile Include="2D.EmbeddedArrays.cs" />
-    <Compile Include="2D.Grouping.cs" />
-    <Compile Include="2D.Rotation.cs" />
-    <Compile Include="2D.Mathematics.cs" />
-    <Compile Include="2D.Subarrays.cs" />
-    <Compile Include="2D.Conversion.cs" />
+    <Compile Include="2D.Combination.cs">
+      <DependentUpon>2D.cs</DependentUpon>
+    </Compile>
+    <Compile Include="2D.EmbeddedArrays.cs">
+      <DependentUpon>2D.cs</DependentUpon>
+    </Compile>
+    <Compile Include="2D.Grouping.cs">
+      <DependentUpon>2D.cs</DependentUpon>
+    </Compile>
+    <Compile Include="2D.Rotation.cs">
+      <DependentUpon>2D.cs</DependentUpon>
+    </Compile>
+    <Compile Include="2D.Mathematics.cs">
+      <DependentUpon>2D.cs</DependentUpon>
+    </Compile>
+    <Compile Include="2D.Subarrays.cs">
+      <DependentUpon>2D.cs</DependentUpon>
+    </Compile>
+    <Compile Include="2D.Conversion.cs">
+      <DependentUpon>2D.cs</DependentUpon>
+    </Compile>
     <Compile Include="2D.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
