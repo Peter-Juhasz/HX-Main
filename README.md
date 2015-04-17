@@ -2,7 +2,7 @@
 Hyper Extensions contains LINQ-like extensions to multidimensional arrays.
 
 ## Portability
- - HyperLinq was written as a Portable Class Library and provides support for (.NET Framework 4.5, Windows 8, Windows Phone 8.1, Windows Phone Silverlight 8) 
+ - Portable Class Library which provides support for .NET Framework 4, Silverlight 5, Windows 8, Windows Phone 8.1, Windows Phone Silverlight 8
  - Common Language Specification compliant code
 
 ## Code Quality
