@@ -17,7 +17,8 @@
             if (source == null)
                 throw new ArgumentNullException("source");
 
-            int width = source.GetLength(0), height = source.GetLength(1);
+            int width = source.GetLength(0),
+                height = source.GetLength(1);
 
             if (width != height)
                 throw new ArgumentOutOfRangeException("source", "Source must be a square matrix.");
@@ -39,7 +40,8 @@
             if (source == null)
                 throw new ArgumentNullException("source");
 
-            int width = source.GetLength(0), height = source.GetLength(1);
+            int width = source.GetLength(0),
+                height = source.GetLength(1);
 
             if (width != height)
                 throw new ArgumentOutOfRangeException("source", "Source must be a square matrix.");

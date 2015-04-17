@@ -28,7 +28,8 @@
             if (resultSelector == null)
                 throw new ArgumentNullException("resultSelector");
 
-            int width = source.GetLength(0), height = source.GetLength(1);
+            int width = source.GetLength(0),
+                height = source.GetLength(1);
 
             if (second.GetLength(0) != width)
                 throw new ArgumentOutOfRangeException("second", "The width of the second array must match the width of the source array.");
@@ -120,16 +121,16 @@
         }
 
         /// <summary>
-        /// ... This method is the generatilazed matrix multiplication.
+        /// Combines two 2D arrays (n × m and m × p) into a new one by combining their elements like a matrix multiplication.
         /// </summary>
         /// <typeparam name="T1"></typeparam>
         /// <typeparam name="T2"></typeparam>
         /// <typeparam name="TPartialResult"></typeparam>
         /// <typeparam name="TResult"></typeparam>
         /// <param name="source"></param>
-        /// <param name="second"></param>
-        /// <param name="accumulator"></param>
-        /// <param name="resultSelector"></param>
+        /// <param name="second">The second array to join.</param>
+        /// <param name="accumulator">Combines a pair of corresponding elements into a new one. This operation corresponds to the addition in a matrix multiplication.</param>
+        /// <param name="resultSelector">Aggregates the partial results computed by the <paramref name="accumulator"/> function into a single one, which is one of the elements of the result array. This operation corresponds to the multiplication in a matrix multiplication.</param>
         /// <returns></returns>
         public static TResult[,] CrossJoin<T1, T2, TPartialResult, TResult>(this T1[,] source, T2[,] second,
             Func<T1, T2, TPartialResult> accumulator,

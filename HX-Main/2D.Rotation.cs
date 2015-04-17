@@ -18,7 +18,8 @@
             if (source == null)
                 throw new ArgumentNullException("source");
 
-            int width = source.GetLength(0), height = source.GetLength(1);
+            int width = source.GetLength(0),
+                height = source.GetLength(1);
 
             T[,] result = new T[height, width];
 
@@ -40,7 +41,8 @@
             if (source == null)
                 throw new ArgumentNullException("source");
 
-            int width = source.GetLength(0), height = source.GetLength(1);
+            int width = source.GetLength(0),
+                height = source.GetLength(1);
 
             T[,] result = new T[height, width];
 
@@ -62,7 +64,8 @@
             if (source == null)
                 throw new ArgumentNullException("source");
 
-            int width = source.GetLength(0), height = source.GetLength(1);
+            int width = source.GetLength(0),
+                height = source.GetLength(1);
 
             T[,] result = new T[height, width];
 
@@ -84,7 +87,8 @@
             if (source == null)
                 throw new ArgumentNullException("source");
 
-            int width = source.GetLength(0), height = source.GetLength(1);
+            int width = source.GetLength(0),
+                height = source.GetLength(1);
 
             T[,] result = new T[height, width];
 
@@ -106,7 +110,8 @@
             if (source == null)
                 throw new ArgumentNullException("source");
 
-            int width = source.GetLength(0), height = source.GetLength(1);
+            int width = source.GetLength(0),
+                height = source.GetLength(1);
 
             T[,] result = new T[height, width];
 

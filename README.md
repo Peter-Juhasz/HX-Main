@@ -8,7 +8,6 @@ Hyper Extensions contains LINQ-like extensions to multidimensional arrays.
 ## Code Quality
  - Passes Microsoft Managed Recommended Rules without any warnings
  - Passes Code Contracts static checking without any warnings at high level
- - 80%+ Code Coverage
  - All public members and parameters are documented
 
 ## Examples

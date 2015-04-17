@@ -22,7 +22,8 @@
             if (selector == null)
                 throw new ArgumentNullException("selector");
 
-            int width = source.GetLength(0), height = source.GetLength(1);
+            int width = source.GetLength(0),
+                height = source.GetLength(1);
 
             TResult[,] result = new TResult[width, height];
 
@@ -48,7 +49,8 @@
             if (selector == null)
                 throw new ArgumentNullException("selector");
 
-            int width = source.GetLength(0), height = source.GetLength(1);
+            int width = source.GetLength(0),
+                height = source.GetLength(1);
 
             TResult[,] result = new TResult[width, height];
 

@@ -12,7 +12,7 @@
         /// </summary>
         /// <typeparam name="T"></typeparam>
         /// <param name="source"></param>
-        /// <param name="selector">A map function.</param>
+        /// <param name="selector">Projects each element into a 2D array.</param>
         /// <returns></returns>
         public static T[,] Expand<T>(this T[,] source, Func<T, T[,]> selector)
         {
@@ -42,7 +42,8 @@
             if (source == null)
                 throw new ArgumentNullException("source");
 
-            int width = source.GetLength(0), height = source.GetLength(1);
+            int width = source.GetLength(0),
+                height = source.GetLength(1);
 
             int resultWidth = source.AsColumns().Sum(c => c.Max(e => e.GetLength(0))),
                 resultHeight = source.AsRows().Sum(c => c.Max(e => e.GetLength(1)));

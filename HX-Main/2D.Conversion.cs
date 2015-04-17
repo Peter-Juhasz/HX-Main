@@ -13,7 +13,7 @@
         /// </summary>
         /// <typeparam name="T"></typeparam>
         /// <param name="source"></param>
-        /// <param name="predicate"></param>
+        /// <param name="predicate">Filters elements based on their location in the array.</param>
         /// <returns></returns>
         public static IEnumerable<T> AsEnumerable<T>(this T[,] source, Func<int, int, bool> predicate)
         {
@@ -43,32 +43,6 @@
         }
 
         /// <summary>
-        /// Converts a two dimensional array into a single dimensional and projects each element into a new form.
-        /// </summary>
-        /// <typeparam name="T"></typeparam>
-        /// <param name="source"></param>
-        /// <param name="selector"></param>
-        /// <returns></returns>
-        public static TResult[] To1DArray<T, TResult>(this T[,] source, Func<T, TResult> selector)
-        {
-            if (source == null)
-                throw new ArgumentNullException("source");
-
-            if (selector == null)
-                throw new ArgumentNullException("selector");
-
-            int width = source.GetLength(0),
-                height = source.GetLength(1);
-
-            TResult[] result = new TResult[width * height];
-
-            for (int x = 0; x < width; x++)
-            for (int y = 0; y < height; y++)
-                result[x * height + y] = selector(source[x, y]);
-
-            return result;
-        }
-        /// <summary>
         /// Converts a two dimensional array into a single dimensional one.
         /// </summary>
         /// <typeparam name="T"></typeparam>
@@ -76,7 +50,19 @@
         /// <returns></returns>
         public static T[] To1DArray<T>(this T[,] source)
         {
-            return source.To1DArray(e => e);
+            if (source == null)
+                throw new ArgumentNullException("source");
+
+            int width = source.GetLength(0),
+                height = source.GetLength(1);
+
+            T[] result = new T[width * height];
+
+            for (int x = 0; x < width; x++)
+            for (int y = 0; y < height; y++)
+                result[x * height + y] = source[x, y];
+
+            return result;
         }
 
         /// <summary>

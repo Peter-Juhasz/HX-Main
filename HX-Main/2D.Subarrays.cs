@@ -8,14 +8,14 @@
     public static partial class ExtensionsTo2DArrays
     {
         /// <summary>
-        /// 
+        /// Retrieves a subarray of this instance.
         /// </summary>
         /// <typeparam name="T"></typeparam>
         /// <param name="source"></param>
         /// <param name="x"></param>
         /// <param name="y"></param>
-        /// <param name="width"></param>
-        /// <param name="height"></param>
+        /// <param name="width">The width of the subarray to crop.</param>
+        /// <param name="height">The height of the subarray to crop.</param>
         /// <returns></returns>
         public static T[,] Crop<T>(this T[,] source, int x, int y, int width, int height)
         {
@@ -27,8 +27,9 @@
 
             if (y <= 0)
                 throw new ArgumentOutOfRangeException("y");
-
-            int sourceWidth = source.GetLength(0), sourceHeight = source.GetLength(1);
+            
+            int sourceWidth = source.GetLength(0),
+                sourceHeight = source.GetLength(1);
 
             if (x > width - 2)
                 throw new ArgumentOutOfRangeException("x");
@@ -71,7 +72,8 @@
             if (newHeight <= 0)
                 throw new ArgumentOutOfRangeException("newHeight");
 
-            int width = source.GetLength(0), height = source.GetLength(1);
+            int width = source.GetLength(0),
+                height = source.GetLength(1);
 
             T[,] result = new T[newWidth, newHeight];
 
@@ -95,7 +97,8 @@
             if (source == null)
                 throw new ArgumentNullException("source");
 
-            int width = source.GetLength(0), height = source.GetLength(1);
+            int width = source.GetLength(0),
+                height = source.GetLength(1);
 
             if (x < 0 || x >= width)
                 throw new ArgumentOutOfRangeException("x");

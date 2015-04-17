@@ -26,7 +26,8 @@
             if (groupHeight <= 0)
                 throw new ArgumentOutOfRangeException("groupHeight");
 
-            int width = source.GetLength(0), height = source.GetLength(1);
+            int width = source.GetLength(0),
+                height = source.GetLength(1);
 
             if (width % groupWidth != 0)
                 throw new ArgumentException("Width of the source array must be an integer multiple of group width.");
