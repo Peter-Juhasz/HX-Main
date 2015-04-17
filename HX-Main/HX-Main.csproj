@@ -36,6 +36,31 @@
   </PropertyGroup>
   <ItemGroup>
     <!-- A reference to the entire .NET Framework is automatically included -->
+    <Compile Include="2D - Copy.Combination.cs">
+      <DependentUpon>3D.cs</DependentUpon>
+    </Compile>
+    <Compile Include="2D - Copy.Conversion.cs">
+      <DependentUpon>3D.cs</DependentUpon>
+    </Compile>
+    <Compile Include="3D.cs" />
+    <Compile Include="2D - Copy.EmbeddedArrays.cs">
+      <DependentUpon>3D.cs</DependentUpon>
+    </Compile>
+    <Compile Include="2D - Copy.Grouping.cs">
+      <DependentUpon>3D.cs</DependentUpon>
+    </Compile>
+    <Compile Include="2D - Copy.Mapping.cs">
+      <DependentUpon>3D.cs</DependentUpon>
+    </Compile>
+    <Compile Include="2D - Copy.Mathematics.cs">
+      <DependentUpon>3D.cs</DependentUpon>
+    </Compile>
+    <Compile Include="2D - Copy.Rotation.cs">
+      <DependentUpon>3D.cs</DependentUpon>
+    </Compile>
+    <Compile Include="2D - Copy.Subarrays.cs">
+      <DependentUpon>3D.cs</DependentUpon>
+    </Compile>
     <Compile Include="2D.Mapping.cs">
       <DependentUpon>2D.cs</DependentUpon>
     </Compile>
