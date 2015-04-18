@@ -5,15 +5,6 @@ Hyper Extensions is a .NET library which contains LINQ-style operators for manip
 Install-Package HX-Main
 ```
 
-## Portability
- - Portable Class Library which provides support for .NET Framework 4, Silverlight 5, Windows 8, Windows Phone 8.1, Windows Phone Silverlight 8
- - Common Language Specification compliant code
-
-## Code Quality
- - Passes Microsoft Managed Recommended Rules without any warnings
- - Passes Code Contracts static checking without any warnings at high level
- - All public members and parameters are documented
-
 ## Examples
 
 Matrix addition of two arrays ```double[,] A, B```:
@@ -43,13 +34,22 @@ int[,] scaledTo50 = pixels.Split(2, 2).Map(e => (int)e.AsEnumerable().Average())
 
 Checking a sudoku solution represented as ```int[,] puzzle```:
 ```C#
-bool isSolution =
+bool correct =
 	(puzzle.AsRows()) // rows
 		.Union
 	(puzzle.AsColumns()) // columns
 		.Union
-	(puzzle.Split(3, 3).AsEnumerable().Select(e => e.To1DArray())) // regions
+	(puzzle.Split(3, 3).AsEnumerable().Select(e => e.To1DArray())) // 3x3 regions
 
 	// check
 	.All(g => Enumerable.Range(1, 9).All(e => g.Contains(e)));
 ```
+
+## Portability
+ - Portable Class Library which provides support for .NET Framework 4, Silverlight 5, Windows 8, Windows Phone 8.1, Windows Phone Silverlight 8
+ - Common Language Specification compliant code
+
+## Code Quality
+ - Passes Microsoft Managed Recommended Rules without any warnings
+ - Passes Code Contracts static checking without any warnings at high level
+ - All public members and parameters are documented
