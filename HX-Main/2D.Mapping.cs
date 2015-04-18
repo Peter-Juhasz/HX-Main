@@ -11,6 +11,7 @@
         /// Projects each element of an array into a new form.
         /// </summary>
         /// <typeparam name="T"></typeparam>
+        /// <typeparam name="TResult"></typeparam>
         /// <param name="source"></param>
         /// <param name="selector">A transform function to apply to each element.</param>
         /// <returns></returns>

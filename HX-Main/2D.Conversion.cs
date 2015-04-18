@@ -66,23 +66,24 @@
         }
 
         /// <summary>
-        /// Converts a single dimensional array to a two dimensional by splitting it with specified column lengths.
+        /// Converts a single dimensional array to a two dimensional by splitting it to rows containing a given number of elements.
         /// </summary>
         /// <typeparam name="T"></typeparam>
         /// <param name="source"></param>
+        /// <param name="rowSize">The size of a column in the result array.</param>
         /// <returns></returns>
-        public static T[,] To2DArray<T>(this T[] source, int length)
+        public static T[,] To2DArray<T>(this T[] source, int rowSize)
         {
             if (source == null)
                 throw new ArgumentNullException("source");
 
-            if (length <= 0)
-                throw new ArgumentOutOfRangeException("length");
+            if (rowSize <= 0)
+                throw new ArgumentOutOfRangeException("rowSize");
 
-            T[,] result = new T[source.Length / length, length];
+            T[,] result = new T[source.Length / rowSize, rowSize];
 
             for (int i = 0; i < source.Length; i++)
-                result[i % length, i / length] = source[i];
+                result[i % rowSize, i / rowSize] = source[i];
 
             return result;
         }
