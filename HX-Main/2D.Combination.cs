@@ -34,7 +34,7 @@
             if (second.GetLength(0) != width)
                 throw new ArgumentOutOfRangeException("second", "The width of the second array must match the width of the source array.");
 
-            if (second.GetLength(0) != height)
+            if (second.GetLength(1) != height)
                 throw new ArgumentOutOfRangeException("second", "The height of the second array must match the height of the source array.");
 
             TResult[,] result = new TResult[width, height];
@@ -61,7 +61,8 @@
             if (second == null)
                 throw new ArgumentNullException("second");
 
-            int width = source.GetLength(0), height = source.GetLength(1);
+            int width = source.GetLength(0),
+                height = source.GetLength(1);
 
             int secondHeight = second.GetLength(1);
 

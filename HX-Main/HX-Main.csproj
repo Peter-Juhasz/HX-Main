@@ -39,6 +39,9 @@
   </PropertyGroup>
   <ItemGroup>
     <!-- A reference to the entire .NET Framework is automatically included -->
+    <Compile Include="3D.Combination.cs">
+      <DependentUpon>3D.cs</DependentUpon>
+    </Compile>
     <Compile Include="3D.cs" />
   </ItemGroup>
   <ItemGroup>
