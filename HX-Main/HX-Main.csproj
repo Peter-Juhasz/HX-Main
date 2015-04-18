@@ -73,6 +73,9 @@
       <DependentUpon>2D.cs</DependentUpon>
     </Compile>
     <Compile Include="2D.cs" />
+    <Compile Include="3D.Mapping.cs">
+      <DependentUpon>3D.cs</DependentUpon>
+    </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath32)\Microsoft\Portable\$(TargetFrameworkVersion)\Microsoft.Portable.CSharp.targets" />
