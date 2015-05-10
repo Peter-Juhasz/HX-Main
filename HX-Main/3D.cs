@@ -31,6 +31,16 @@
                 height = source.GetLength(1),
                 depth = source.GetLength(2);
 
+            if (width != second.GetLength(0))
+                throw new ArgumentException("second", "The width of the second array must match the width of the source array.");
+
+            if (height != second.GetLength(1))
+                throw new ArgumentException("second", "The height of the second array must match the height of the source array.");
+
+            if (depth != second.GetLength(2))
+                throw new ArgumentException("second", "The depth of the second array must match the depth of the source array.");
+
+
             for (int x = 0; x < width; x++)
             for (int y = 0; y < height; y++)
             for (int z = 0; z < depth; z++)
