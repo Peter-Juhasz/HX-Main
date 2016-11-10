@@ -1,4 +1,4 @@
-﻿namespace HXMain.Testing
+﻿namespace Science.Collections.MultiDimensional.Linq.Testing
 {
     using Microsoft.VisualStudio.TestTools.UnitTesting;
     using System;

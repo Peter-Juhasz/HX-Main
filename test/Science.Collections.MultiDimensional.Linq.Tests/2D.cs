@@ -1,4 +1,4 @@
-﻿namespace HXMain.Tests
+﻿namespace Science.Collections.MultiDimensional.Linq.Tests
 {
     using System.Linq;
     using Microsoft.VisualStudio.TestTools.UnitTesting;
@@ -11,7 +11,8 @@
         [TestMethod]
         public void AsEnumerable()
         {
-            int[,] candidate = new int[,] {
+            int[,] candidate = 
+            {
                 { 1, 2, 3, },
                 { 4, 5, 6, },
                 { 7, 8, 9, },
@@ -24,7 +25,8 @@
         [TestMethod]
         public void To1DArray()
         {
-            int[,] candidate = new int[,] {
+            int[,] candidate = 
+            {
                 { 1, 2, 3, },
                 { 4, 5, 6, },
                 { 7, 8, 9, },
@@ -38,14 +40,16 @@
         [TestMethod]
         public void Map()
         {
-            int[,] candidate = new int[,] {
+            int[,] candidate = 
+            {
                 { 1, 5, 9, },
                 { 2, 6, 10, },
                 { 3, 7, 11, },
                 { 4, 8, 12, },
             };
 
-            int[,] expected = new int[,] {
+            int[,] expected =
+            {
                 { 2, 10, 18, },
                 { 4, 12, 20, },
                 { 6, 14, 22, },

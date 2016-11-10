@@ -1,5 +1,5 @@
-# Hyper Extensions
-Hyper Extensions is a .NET library which contains LINQ-style operators for manipulating multidimensional arrays.
+# Science.Collections.MultiDimensional.Linq
+It is a .NET library which contains LINQ-style operators for manipulating multidimensional arrays.
 
 ```
 Install-Package HX-Main

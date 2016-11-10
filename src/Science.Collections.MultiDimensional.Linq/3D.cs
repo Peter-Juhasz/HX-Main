@@ -1,4 +1,4 @@
-﻿namespace System.Linq
+﻿namespace Science.Collections.MultiDimensional.Linq
 {
     using System;
     using System.Collections.Generic;

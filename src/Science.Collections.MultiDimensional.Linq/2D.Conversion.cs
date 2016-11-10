@@ -1,7 +1,8 @@
-﻿namespace System.Linq
+﻿namespace Science.Collections.MultiDimensional.Linq
 {
     using System;
     using System.Collections.Generic;
+    using System.Linq;
 
     /// <summary>
     /// Provides extensions methods to 2-dimensional arrays.
