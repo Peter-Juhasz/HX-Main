@@ -1,13 +1,20 @@
 ﻿{
+    "title": "Science.Collections.MultiDimensional.Linq",
     "version": "1.0.0-*",
+    "authors": [ "Péter Juhász" ],
+    "description": "LINQ-like operators for manipulating multidimensional arrays.",
+    "copyright": "Péter Juhász",
+    "packOptions": {
+        "projectUrl": "https://github.com/Peter-Juhasz/Science.Collections.MultiDimensional.Linq",
+        "owners": [ "Péter Juhász" ],
+        "tags": [ "linq", "multi-dimensional", "2d", "arrays" ]
+    },
 
     "dependencies": {
         "NETStandard.Library": "1.6.0"
     },
 
     "frameworks": {
-        "netstandard1.6": {
-            "imports": "dnxcore50"
-        }
+        "netstandard1.6": { }
     }
 }
