@@ -1,8 +1,8 @@
 # Science.Collections.MultiDimensional.Linq
-It is a .NET library which contains LINQ-style operators for manipulating multidimensional arrays.
+LINQ-style operators for manipulating multidimensional arrays supporting **.NET Standard 1.6**.
 
 ```
-Install-Package HX-Main
+Install-Package Science.Collections.MultiDimensional.Linq -Pre
 ```
 
 ## Examples
@@ -46,7 +46,7 @@ bool correct =
 ```
 
 ## Portability
- - Portable Class Library which provides support for .NET Framework 4, Silverlight 5, Windows 8, Windows Phone 8.1, Windows Phone Silverlight 8
+ - .NET Standard 1.6
  - Common Language Specification compliant code
 
 ## Code Quality
